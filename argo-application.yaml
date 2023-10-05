@@ -10,8 +10,8 @@ spec:
   project: default
   source: 
     path: helm/webapp
-    repoURL: "https://github.com/karthiksaladi047/argocd-webapp-config.git"
-    targetRevision: main
+    repoURL: "https://github.com/karthiksaladi047/argocd-project.git"
+    targetRevision: config-branch
   syncPolicy:
     automated: 
       prune: true
