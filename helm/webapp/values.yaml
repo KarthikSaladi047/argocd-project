@@ -5,7 +5,7 @@
 replicaCount: 3
 
 image:
-  repository: karthiksaladi047/argocd-webapp
+  repository: karthiksaladi047/argocd-project
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: 4d19b6f75921180a74917e4867e7bb10d4907bad
