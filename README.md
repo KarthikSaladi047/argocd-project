@@ -1,5 +1,6 @@
 # ArgoCD-Project
 Building and deploying a .NET application using GitHub Actions as the CI/CD pipeline and ArgoCD for continuous deployment on a Minikube cluster(k8s cluster). Let's break down the steps to achieve this:
+![ArgoCD-Project](https://github.com/KarthikSaladi047/argocd-project/assets/105864615/8c586d08-a177-46b6-a2d6-f8c1a21648a9)
 
 ## Setting Up GitHub Repository:
 
@@ -107,6 +108,8 @@ jobs:
   ```
   kubectl get secret -n argocd argocd-initial-admin-secret -o yaml
   ```
+  ![Screenshot from 2023-10-05 16-59-52](https://github.com/KarthikSaladi047/argocd-project/assets/105864615/3e7d8183-b67d-4033-bf3d-3667d2be467e)
+
 ## ArgoCD Application Configuration:
 
 - Create an ArgoCD Application resource in our ArgoCD configuration repository to define how application should be deployed.
@@ -137,8 +140,10 @@ spec:
 ```
 Deploy the ArgoCd Application resource.
 ```
-kubectl apply -n argocd -f arg-application.yaml
+kubectl apply -n argocd -f argo-application.yaml
 ```
+![Screenshot from 2023-10-05 16-57-29](https://github.com/KarthikSaladi047/argocd-project/assets/105864615/1c7192a1-7810-47fc-a9c0-02e732958ec1)
+ 
 ## Verifing CICD Pipeline and Argocd Sync
 - Make changes to the application files and commit the changes.
 - We can see that the GitHub Action CI Pipeline got triggerd and started running the taskes mentioned in the Workflow ci.yml file.
